@@ -2,17 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Test task from CoinyPay</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
 <div class="wrapper">
   <header class="header">
-    <h1 class="header__title"></h1>
+    <h1 class="header__title">Тестовое задание: "Числа Фибоначчи"</h1>
+    <div class="header__info">
+      <dl>
+        <dt>Название</dt>
+        <dd>Числа Фибоначчи</dd>
+        <dt>Автор</dt>
+        <dd>Ермолин Владислав</dd>
+        <dt>Весия</dt>
+        <dd>0.0.1</dd>
+        <dt>Дата</dt>
+        <dd>4 октября 2017</dd>
+      </dl>
+    </div>
   </header>
 
   <main class="main">
+    <form action="*" method="post" class="form">
+      <div class="form__line">
+        <label>Введите число:
+          <input type="text" name="digit" class="form__text">
+        </label>
+        <input type="submit" name="send" value="Послать на сервер" class="form__submit form__submit--send">
+      </div>
+
+      <div class="form__line">
+        <label>Введите ключ аутентификации:
+          <input type="text" name="auth" class="form__text">
+        </label>
+      </div>
+
+      <div class="form__line">
+        <input type="submit" name="reset" value="Сброс данных" class="form__submit form__submit--reset">
+      </div>
+    </form>
+
+    <table class="request">
+      <thead>
+      <tr>
+        <th>Запрос</th>
+        <th>Ответ</th>
+        <th>Данные</th>
+        <th>Время </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="request__send"></td>
+        <td class="request__receive">Ответ</td>
+        <td class="request__data">1</td>
+        <td class="request__timestamp">12:00</td>
+      </tr>
+      </tbody>
+    </table>
   </main>
 </div>
 
