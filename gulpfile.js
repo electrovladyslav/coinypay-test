@@ -11,7 +11,7 @@ const minify = require('gulp-csso');
 const rename = require('gulp-rename');
 const rollup = require('gulp-better-rollup');
 const sourcemaps = require('gulp-sourcemaps');
-var ghPages = require('gulp-gh-pages');
+const ghPages = require('gulp-gh-pages');
 
 gulp.task('style', function () {
   gulp.src('sass/style.scss')
@@ -91,7 +91,7 @@ gulp.task('assemble', ['clean'], function () {
 
 gulp.task('build', ['assemble']);
 
-gulp.task('deploy', ['build'], function() {
+gulp.task('deploy', function() {
   return gulp.src('./build/**/*')
     .pipe(ghPages());
 });
